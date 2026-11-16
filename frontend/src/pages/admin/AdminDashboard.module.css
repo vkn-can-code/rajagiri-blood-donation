@@ -1,0 +1,394 @@
+/* --- REDESIGNED ADMIN DASHBOARD CSS --- */
+
+.dashboardContainer {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.heroSection {
+  margin-bottom: 2rem;
+}
+
+.heroTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* --- Stats Grid --- */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eaeaea;
+  position: relative;
+  overflow: hidden;
+}
+
+.statCardInner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconGreen {
+  background-color: #e6f6eb;
+  color: #219653;
+}
+
+.iconBlue {
+  background-color: #e8f0fe;
+  color: #2f80ed;
+}
+
+.iconRed {
+  background-color: #ffebee;
+  color: #eb5757;
+}
+
+.iconOrange {
+  background-color: #fff3e0;
+  color: #f2994a;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.trend {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.trend.up { color: #219653; }
+.trend.down { color: #eb5757; }
+.trendText { color: #888; font-weight: 400; margin-left: 0.25rem; }
+
+/* --- Dashboard Main Content Grid --- */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1.5rem;
+}
+
+/* --- Cards --- */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.cardAction {
+  font-size: 0.875rem;
+  color: #219653;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cardAction:hover {
+  text-decoration: underline;
+}
+
+.dropdownSelect {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  font-size: 0.875rem;
+  color: #333;
+  outline: none;
+  background: #fff;
+}
+
+/* --- Lists --- */
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Recent Requests */
+.requestInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bloodTypeBadge {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.bloodTypeBadge.O_pos { background-color: #ffebee; color: #eb5757; }
+.bloodTypeBadge.A_neg { background-color: #ffebee; color: #eb5757; }
+.bloodTypeBadge.B_pos { background-color: #e6f6eb; color: #219653; }
+.bloodTypeBadge.AB_pos { background-color: #e6f6eb; color: #219653; }
+
+.requestDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.requestHospital {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.requestMeta {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.statusBadge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.statusBadge.urgent { background-color: #ffebee; color: #eb5757; }
+.statusBadge.normal { background-color: #e6f6eb; color: #219653; }
+
+/* Top Donors */
+.donorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.donorRank {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff3e0;
+  color: #f2994a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.donorAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e6f6eb;
+  color: #219653;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donorName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.donationsCount {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #219653;
+  background-color: #e6f6eb;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Charts */
+.chartContainer {
+  height: 250px;
+  width: 100%;
+}
+
+.doughnutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+.doughnutChartWrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.doughnutCenterLabel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.doughnutCenterValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  display: block;
+}
+
+.doughnutCenterText {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.legendContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legendLabel {
+  font-weight: 600;
+  color: #333;
+  width: 40px;
+}
+
+.legendValue {
+  color: #666;
+  width: 30px;
+}
+
+.legendPercentage {
+  color: #888;
+}
+
+.errorMessage {
+  background: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mainGrid, .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  .doughnutContainer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,96 @@
+/* This file is src/pages/volunteer/VolunteerDashboard.module.css */
+
+.pageContainer {
+  padding: 1.5rem 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.pageSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-light, #555);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* --- Table Styles --- */
+.tableWrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #e0e0e0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.adminTable th,
+.adminTable td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.adminTable th {
+  background-color: #f9fafb;
+  font-size: 0.9rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.adminTable tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Action Buttons --- */
+.actionsCell {
+  text-align: center;
+}
+
+.contactButton {
+  background-color: #e6f7ec;
+  color: #0a6c2f;
+  border: 1px solid #b7e4c7;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.contactButton:hover {
+  background-color: #0a6c2f;
+  color: white;
+}
+
+/* --- Messages --- */
+.messageSuccess {
+  padding: 15px;
+  background-color: #e6f7ec;
+  border: 1px solid #b7e4c7;
+  color: #0a6c2f;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.messageError {
+  padding: 15px;
+  background-color: #fde8e8;
+  border: 1px solid #f5c6cb;
+  color: var(--primary-red, #b11d24);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,145 @@
+/* This file is src/App.css */
+/* It contains all global, reusable styles for the app */
+
+/* --- Typography & Layout --- */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.page-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  /* Dark text */
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.15rem;
+  color: #6b7280;
+  /* Light text */
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+/* Primary "Green" Button */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Secondary "Grey" Button */
+.btn-secondary {
+  background-color: #f3f4f6;
+  /* Light grey */
+  color: #374151;
+  /* Dark grey text */
+  border: 1px solid #e5e7eb;
+}
+
+.btn-secondary:hover {
+  background-color: #e5e7eb;
+  /* Darker grey */
+}
+
+/* --- Forms --- */
+.form-card {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.form-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  /* Important! */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Update focus color to green */
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+/* Error messages should still be red */
+.form-error {
+  color: var(--status-rejected);
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* --- Utility --- */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary);
+  /* Green spinner */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 3rem auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

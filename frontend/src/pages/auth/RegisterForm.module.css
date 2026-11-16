@@ -1,0 +1,55 @@
+/* This file is src/pages/auth/RegisterForm.module.css */
+
+.formCard {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.formTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.errorMessage {
+  color: var(--status-rejected, #f44336);
+  background-color: #fde8e8;
+  border: 1px solid #f5c6cb;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.fullWidthButton {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.formLink {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.formLink a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.formLink a:hover {
+  text-decoration: underline;
+}

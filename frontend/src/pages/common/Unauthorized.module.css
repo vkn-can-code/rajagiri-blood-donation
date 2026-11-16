@@ -1,0 +1,57 @@
+/* This file is src/pages/common/Unauthorized.css */
+
+.unauthorized-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 70vh;
+}
+
+.unauthorized-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.unauthorized-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fde8e8;
+  color: var(--primary-red);
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.unauthorized-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.unauthorized-text {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.unauthorized-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Use global button styles .btn, .btn-primary, .btn-secondary */

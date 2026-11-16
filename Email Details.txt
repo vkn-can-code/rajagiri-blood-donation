@@ -1,0 +1,9 @@
+Here is the setup for all automated emails in the system:
+
+When (Trigger)	Which (Email Type)	Where (Code Location)	Where To (Recipient)
+Monthly (1st @ 00:00)	Monthly Statistical Report	src/jobs/cron.js	All Admins
+Daily (Checking database)	Eligibility Reminder (3mo rule)	src/jobs/cron.js	Eligible Students
+Admin Creates Request	Urgent Blood Request Alert	src/controllers/bloodRequestController.js	All Users (BCC)
+Faculty Approves Donation	Appreciation Email	src/controllers/facultyController.js	Student (Donor)
+Student Uploads Donation	New Donation Alert	src/controllers/donationController.js	Class Tutor
+Student Uploads Donation	Appreciation Email	src/controllers/donationController.js

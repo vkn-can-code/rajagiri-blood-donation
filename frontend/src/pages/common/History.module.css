@@ -1,0 +1,98 @@
+.pageContainer {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+/* Tabs */
+.tabContainer {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabButton {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.activeTab {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* Table */
+.tableCard {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historyTable th,
+.historyTable td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.historyTable th {
+  background-color: #f9fafb;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.subTable {
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.subTable th {
+  background-color: #f0fdf4;
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  padding: 8px;
+}
+
+.subTable td {
+  padding: 8px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #eee;
+}
+
+.emptyMessage {
+  padding: 2rem;
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.expandRow {
+  background-color: #f9fafb;
+}

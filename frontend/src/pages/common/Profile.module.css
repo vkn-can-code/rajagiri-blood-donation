@@ -1,0 +1,198 @@
+/* Page wrapper */
+.profileWrapper {
+  max-width: 950px;
+  margin: 3rem auto;
+  padding: 0 1.2rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Header section with avatar */
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.profileAvatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.profileName {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.profileTagline {
+  margin: 0.3rem 0 0 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: capitalize;
+}
+
+/* Main card */
+.profileCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Titles */
+.sectionTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+  color: var(--text-dark);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.7rem;
+}
+
+/* Information box */
+.infoBox {
+  background: #fcfcfc;
+  border-radius: 12px;
+  padding: 1.3rem 1.1rem;
+  border: 1px solid #ececec;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.infoBox:hover {
+  background: #f5fdf7;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Labels */
+.infoBox label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #8b8b8b;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+/* Values */
+.infoBox p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+}
+
+/* Role highlight */
+.roleText {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Divider */
+.divider {
+  margin: 2.4rem 0;
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .profileCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Edit Profile Styles */
+.editButton {
+  transition: all 0.2s;
+}
+.editButton:hover {
+  background: #555 !important;
+}
+
+.editForm {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.formGroup {
+  margin-bottom: 1.2rem;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+.saveButton {
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+.saveButton:hover {
+  opacity: 0.9 !important;
+}

@@ -1,0 +1,10 @@
+Event,Recipient,Purpose
+New Blood Request,All Users (BCC),Notify users about an urgent blood need
+Donation Uploaded,Class Tutor,Notify tutor to review a new certificate
+Donation Approved,Student,Appreciate student for donation
+Volunteer Response,Responder (Student),Confirm volunteer sign-up
+Volunteer Notification,Class Tutor,Notify tutor of student volunteering
+Eligibility Reminder,Eligible Users,Remind user 3 months after last donation
+Monthly Admin Report,All Admins,System statistics summary
+Monthly Faculty Report,Class Tutors,Batch performance summary
+Hero of the Year,Top Donor,Award/Recognition (Log only currently)

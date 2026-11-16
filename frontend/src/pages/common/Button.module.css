@@ -1,0 +1,42 @@
+/* This file is src/common/Button.module.css */
+/* Uses the global CSS variables from src/index.css */
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-family: inherit; /* Ensure it uses the app's font */
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+.primary:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.secondary {
+  background-color: #fff;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.secondary:hover:not(:disabled) {
+  background-color: var(--primary-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}

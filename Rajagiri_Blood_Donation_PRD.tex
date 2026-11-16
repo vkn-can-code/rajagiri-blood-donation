@@ -1,0 +1,117 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Setup page margins
+\geometry{a4paper, margin=1in}
+
+% Setup hyperlink colors
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={PRD - Rajagiri Blood Donation App},
+}
+
+\title{\textbf{Product Requirements Document (PRD)}\\
+\large Rajagiri Blood Donation Application}
+\author{Development Team}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\subsection{Purpose}
+The purpose of this Product Requirements Document (PRD) is to define the technical and functional requirements for the Rajagiri Blood Donation Application. This platform aims to connect blood donors with individuals in need, streamline the organization of blood donation camps, and manage the end-to-end lifecycle of blood requests and donations.
+
+\subsection{Scope}
+The application serves multiple stakeholders including Students, Faculty Admins, Volunteers, and Super Admins. It encompasses blood request matchmaking, camp registrations, certification, and automated email notifications.
+
+\section{Tech Stack}
+The application is built upon a modern JavaScript-based monolithic-tier architecture (MERN-inspired but utilizing PostgreSQL).
+
+\subsection{Frontend}
+\begin{itemize}
+    \item \textbf{Framework:} React.js (v19) configured with React Scripts.
+    \item \textbf{Routing:} React Router DOM (v7) for seamless Single Page Application (SPA) navigation.
+    \item \textbf{State Management \& HTTP:} Axios for API communications.
+    \item \textbf{Mapping:} Leaflet and React-Leaflet for geolocation features (hospital/camp locations).
+    \item \textbf{UI/UX:} SweetAlert2 for dynamic popups, Lucide-React \& React-Icons for iconography.
+    \item \textbf{Data Visualization:} Recharts for rendering admin dashboards and statistical charts.
+\end{itemize}
+
+\subsection{Backend}
+\begin{itemize}
+    \item \textbf{Environment:} Node.js with Express.js.
+    \item \textbf{ORM:} Sequelize for defining models and handling database migrations.
+    \item \textbf{Database:} PostgreSQL (relational database).
+    \item \textbf{Authentication:} JSON Web Tokens (JWT) combined with \texttt{bcryptjs} for secure password hashing.
+    \item \textbf{File Handling:} Multer for handling multipart/form-data (certificate uploads) and Cloudinary for cloud storage integration.
+    \item \textbf{Automation:} \texttt{node-cron} for scheduled tasks.
+    \item \textbf{Mailing:} Nodemailer for automated email triggers (e.g., blood request alerts, registration confirmations).
+\end{itemize}
+
+\section{Technicalities \& Architecture}
+\subsection{System Architecture}
+The system follows a standard Client-Server architecture. The React frontend operates as a decoupled client communicating with the Node.js Express server via RESTful API endpoints. 
+
+\subsection{Database Design}
+The relational database utilizes PostgreSQL to maintain data integrity. Core entities include:
+\begin{itemize}
+    \item \textbf{Users:} Stores profile data, blood group, role (Student, Faculty Admin, Super Admin), and authentication hashes.
+    \item \textbf{BloodRequests:} Tracks patient details, urgency, requested blood group, and required units.
+    \item \textbf{Camps \& CampRegistrations:} Manages upcoming camps and the many-to-many relationship of users registering for them.
+    \item \textbf{Donations:} Logs historical donations and links to uploaded certificates.
+\end{itemize}
+
+\subsection{Security \& Authentication}
+\begin{itemize}
+    \item \textbf{Role-Based Access Control (RBAC):} The API uses middleware to authorize routes based on JWT payload roles. Certain endpoints are strictly reserved for Super Admins (e.g., deleting camps), while others are public or accessible to registered students.
+    \item \textbf{Data Sanitization:} Express-validator is utilized to sanitize inputs and prevent SQL injection attacks.
+\end{itemize}
+
+\section{Features \& Modules}
+\subsection{1. User \& Role Management Module}
+\begin{itemize}
+    \item \textbf{Multi-role Support:} Distinguishes between Students, Faculty Admins, Volunteers, and Super Admins.
+    \item \textbf{Profile Setup:} Users input their blood group, location, contact information, and weight/height to determine donation eligibility.
+    \item \textbf{Bulk Import:} Faculty/Admins can import user data (students) via CSV uploads.
+\end{itemize}
+
+\subsection{2. Blood Request Module}
+\begin{itemize}
+    \item \textbf{Request Creation:} Authorized users can generate urgent blood requests specifying hospital location, urgency level, and units required.
+    \item \textbf{Compatibility Matching:} The system logically matches the requested blood type with compatible donors (e.g., an $O+$ request can accept $O-$ and $O+$).
+    \item \textbf{Response System:} Eligible donors can view and respond to open requests, transitioning the request status and notifying the requester.
+\end{itemize}
+
+\subsection{3. Camp Management Module}
+\begin{itemize}
+    \item \textbf{Camp Scheduling:} Admins can organize camps, define dates, times, and link Google Maps locations.
+    \item \textbf{User Registration:} Students can enroll in upcoming camps. The registration flow includes a health questionnaire.
+    \item \textbf{On-site Data Entry:} Volunteers and Admins can record actual donations happening live at the camp site.
+\end{itemize}
+
+\subsection{4. Certificate \& Reward Module}
+\begin{itemize}
+    \item \textbf{Certificate Upload:} Users can upload physical/digital certificates (PDF/Images) of their past donations to maintain their digital log.
+    \item \textbf{Granting Certificates:} Admins can officially grant digital certificates to users who successfully respond to and fulfill blood requests.
+    \item \textbf{Badges:} Gamification elements (JSON stored in DB) to encourage frequent donors.
+\end{itemize}
+
+\subsection{5. Notification \& Mailer Module}
+\begin{itemize}
+    \item \textbf{Email Triggers:} Automated emails are dispatched using Nodemailer for critical events such as "Urgent Blood Required in your area" or "Camp Registration Approved".
+    \item \textbf{In-app Alerts:} Real-time or polled notifications for users regarding the status of their requests and upcoming eligible donation dates (calculating the 90-day cooldown period).
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,70 @@
+.pageContainer {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notificationItem {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.notificationItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.unread {
+  border-left: 4px solid var(--primary); /* Green border for unread */
+  background-color: #f0fdf4;
+}
+
+.read {
+  opacity: 0.7;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.message {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.dot {
+  color: var(--primary);
+  font-size: 2rem;
+  line-height: 0.5;
+}

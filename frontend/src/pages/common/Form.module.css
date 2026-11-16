@@ -1,0 +1,62 @@
+/* This file is src/common/Form.module.css */
+/* It contains styles for all form-related elements */
+
+/* This styles the <form> tag itself */
+.formCard {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.formTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* This styles the <div className={formStyles.formGroup}> */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+/* This styles the <label> in InputField.jsx */
+.label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+/* This styles the <input> in InputField.jsx */
+.input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box; 
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+/* This styles the error message */
+.errorMessage {
+  color: var(--status-rejected);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: block;
+  margin-top: 0.5rem;
+}

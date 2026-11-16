@@ -1,0 +1,167 @@
+/* This file is src/pages/admin/CampDetails.module.css */
+/* --- NEW FILE --- */
+@import 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+
+.pageContainer {
+  padding: 1.5rem 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.containerTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--background-light);
+  padding-bottom: 10px;
+}
+
+/* --- Layout Grid --- */
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 320px 1fr; /* Form on left, list on right */
+  gap: 2rem;
+  align-items: flex-start;
+}
+@media (max-width: 992px) {
+  .layoutGrid { grid-template-columns: 1fr; }
+}
+
+/* --- Sidebar (Form) --- */
+.sidebar {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  position: sticky;
+  top: 90px;
+}
+@media (max-width: 992px) {
+  .sidebar { position: static; }
+}
+
+.sidebarForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* --- Form --- */
+/* (Styles are identical to CampManagement.module.css) */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.formGroup textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.formButton {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.mapContainer {
+  height: 250px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+
+/* --- Main Content (Participants) --- */
+.mainContent { min-width: 0; }
+.listContainer {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+.listContainer .containerTitle {
+  padding: 1.5rem 1.5rem 10px 1.5rem;
+  margin-bottom: 0;
+}
+.listContainer p {
+  padding: 0 1.5rem;
+  color: var(--text-light);
+  margin-top: -1rem;
+}
+
+.tableWrapper { overflow-x: auto; }
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.adminTable th,
+.adminTable td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+.adminTable th {
+  background-color: var(--background-light);
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+.adminTable tr:last-child td { border-bottom: none; }
+
+/* --- Messages --- */
+.messageSuccess, .messageError {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.messageSuccess {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+.messageError {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}

@@ -1,0 +1,200 @@
+/* This file is src/pages/student/MyDonations.module.css */
+
+.pageContainer {
+  padding: 1.5rem 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.pageSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-light, #555);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.containerTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--primary-red, #b11d24);
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+/* --- Content Grid --- */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 1/3 for form, 2/3 for list */
+  gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .contentGrid {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
+}
+
+/* --- Form --- */
+.formContainer {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #e0e0e0);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  align-self: flex-start; /* Prevent stretching */
+}
+
+.uploadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box; 
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formGroup input[type="file"] {
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--primary-red, #b11d24);
+  box-shadow: 0 0 0 3px rgba(177, 29, 36, 0.1);
+}
+
+.formButton {
+  background-color: var(--primary-red, #b11d24);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.formButton:hover {
+  background-color: var(--primary-red-dark, #8e191e);
+}
+
+/* --- Donation List --- */
+.listContainer {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #e0e0e0);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.donationTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.donationTable th,
+.donationTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.donationTable th {
+  background-color: #f9fafb;
+  font-size: 0.9rem;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.donationTable tr:last-child td {
+  border-bottom: none;
+}
+
+.certificateLink {
+  font-weight: 600;
+  color: var(--primary-red, #b11d24);
+  text-decoration: none;
+}
+.certificateLink:hover {
+  text-decoration: underline;
+}
+
+/* --- Status Badge --- */
+.statusBadge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.statusPending {
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+.statusApproved {
+  background-color: #e6f7ec;
+  color: #0a6c2f;
+  border: 1px solid #b7e4c7;
+}
+.statusRejected {
+  background-color: #fde8e8;
+  color: #b11d24;
+  border: 1px solid #f5c6cb;
+}
+
+/* --- Messages --- */
+.messageSuccess {
+  padding: 15px;
+  background-color: #e6f7ec;
+  border: 1px solid #b7e4c7;
+  color: #0a6c2f;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.messageError {
+  padding: 15px;
+  background-color: #fde8e8;
+  border: 1px solid #f5c6cb;
+  color: var(--primary-red, #b11d24);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
